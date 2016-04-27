@@ -15,7 +15,17 @@ class CreateCompetitionsTable extends Migration
         //
         Schema::create('competitions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('competition')->nullable();
+            $table->string('url')->nullable();
+            $table->string('type')->nullable();
+            $table->string('country')->nullable();
+            $table->string('closing_date')->nullable();
+            $table->string('winner_announcement')->nullable();
+            $table->string('max_words')->nullable();
+            $table->string('currency')->nullable();
+            $table->string('fee')->nullable();
+            $table->string('prize')->nullable();
+            $table->longText('notes')->nullable();
             $table->timestamps();
         });
     }
