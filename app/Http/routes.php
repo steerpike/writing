@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/gather/stories', 'GatherController@stories');
+Route::get('/gather/novels', 'GatherController@novels');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
